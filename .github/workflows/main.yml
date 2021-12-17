@@ -1,7 +1,8 @@
 jobs:
-  name: 'Fact bot'
-  description: 'Sends random fact'
-  runs:
-    using: 'docker'
-    image: 'docker://ghcr.io/github/super-linter:v4.8.4'
+  build:
+    name: 'Fact bot'
+    description: 'Sends random fact'
+    runs:
+      using: 'docker'
+      image: 'docker://ghcr.io/github/super-linter:v4.8.4'
 on: push
