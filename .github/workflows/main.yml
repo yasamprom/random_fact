@@ -3,3 +3,4 @@ description: 'Sends random fact'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+on: push
