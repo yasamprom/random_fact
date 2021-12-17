@@ -1,0 +1,6 @@
+name: Publish to Registry
+  uses: elgohr/Publish-Docker-Github-Action@master
+  with:
+    name: myDocker/repository
+    username: ${{ stepastrunkov }}
+    password: ${{ qn55rLRg<V^@92! }}
