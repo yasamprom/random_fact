@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import asyncio
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
@@ -22,11 +21,12 @@ def get_fact():
 
 @dp.message_handler(commands=['start'])
 async def process_start_command(message: types.Message):
-    await bot.send_message(message.from_user.id, "Привет, пришлю рандомный факт")
+    await bot.send_message(message.from_user.id,
+                           "Привет, пришлю рандомный факт")
 
 
 @dp.message_handler()
-async def process_start_command(message: types.Message):
+async def process_text(message: types.Message):
     s = get_fact()
     # noinspection PyTypeChecker
     await bot.send_message(message.from_user.id, s)
