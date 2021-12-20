@@ -1,0 +1,14 @@
+on:
+  push
+ jobs:
+   linter:
+     name: Python linter
+     runs-on: ubuntu-latest
+     steps:
+     - uses: actions/checkout@v2
+     - name: Python Linter
+       uses: sunnysid3up/python-linter@master
+       with:
+         source: "src"
+         mypy-options: "--ignore-missing-imports --show-error-codes"
+         pylint-options: "--rcfile=setup.cfg"
