@@ -11,6 +11,7 @@ jobs:
    - name: Python Linter
      uses: sunnysid3up/python-linter@master
      with:
-       source: "src"
+       source: "ipr_bot"
        mypy-options: "--ignore-missing-imports --show-error-codes"
        pylint-options: "--rcfile=setup.cfg"
+       django: false
