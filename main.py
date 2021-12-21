@@ -18,7 +18,7 @@ def get_fact():
     sel = soup.select("#" + 'fact')
     ans = sel[0].get_text()[:sel[0].get_text().rfind('.')]
     if ans.find("ПресноИнтересн"):
-        return ans[:ans.find("ПресноИнтересн")]
+        return ans[:1 + ans.find("ПресноИнтересн")]
     return ans
 
 
