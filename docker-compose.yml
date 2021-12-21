@@ -2,7 +2,7 @@ version: '3'
 
 services:
   fact_bot:
-    image: stepastrunkov/fact_bot
+    image: stepastrunkov/fact_bot:main
 
   watchtower:
     image: containrrr/watchtower
