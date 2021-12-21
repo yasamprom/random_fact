@@ -27,7 +27,7 @@ async def process_start_command(message: types.Message):
 
 @dp.message_handler()
 async def process_text(message: types.Message):
-    s = "Факт:\n" + get_fact()
+    s = "Факт: \n" + get_fact()
     # noinspection PyTypeChecker
     await bot.send_message(message.from_user.id, s)
 
