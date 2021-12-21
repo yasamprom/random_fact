@@ -17,7 +17,7 @@ def get_fact():
     soup = BeautifulSoup(text, "html.parser")
     sel = soup.select("#" + 'fact')
     ans = sel[0].get_text()[:sel[0].get_text().rfind('.')]
-    ans = ans[:ans.find("ПресноИнтерсно")]
+    ans = ans[:ans.find("ПресноИнтерсно") + 1]
     return ans
 
 
