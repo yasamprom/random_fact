@@ -16,7 +16,9 @@ def get_fact():
     text = r.text
     soup = BeautifulSoup(text, "html.parser")
     sel = soup.select("#" + 'fact')
-    return sel[0].get_text()[:sel[0].get_text().rfind('.')]
+    ans = sel[0].get_text()[:sel[0].get_text().rfind('.')]
+    ans = ans[:ans.find("ПресноИнтерсно")]
+    return ans
 
 
 @dp.message_handler(commands=['start'])
@@ -27,7 +29,7 @@ async def process_start_command(message: types.Message):
 
 @dp.message_handler()
 async def process_text(message: types.Message):
-    s = "Факт: \n" + get_fact()
+    s = "Вот факт: \n" + get_fact()
     # noinspection PyTypeChecker
     await bot.send_message(message.from_user.id, s)
 
