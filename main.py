@@ -3,10 +3,10 @@ from bs4 import BeautifulSoup
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
+import os
+# from config import TOKEN
 
-from config import TOKEN
-
-
+TOKEN = os.getenv('TOKEN')
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
