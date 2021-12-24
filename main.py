@@ -26,7 +26,7 @@ def get_fact():
 async def process_start_command(message: types.Message):
     await bot.send_message(message.from_user.id,
                            "Привет, пришлю рандомный факт в ответ на "
-                           "любое твое сообщение.")
+                           "любое твое сообщение")
 
 
 @dp.message_handler()
