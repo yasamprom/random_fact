@@ -33,7 +33,7 @@ async def process_start_command(message: types.Message):
 async def process_text(message: types.Message):
     s = get_fact()
     # noinspection PyTypeChecker
-    await message.answer(s)
+    await bot.send_message(message.chat.id, s)
 
 
 if __name__ == '__main__':
