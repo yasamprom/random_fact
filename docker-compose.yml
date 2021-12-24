@@ -2,8 +2,9 @@ version: '3'
 
 services:
   fact_bot:
-    image: stepastrunkov/fact_bot:main
-
+    image: stepastrunkov/fact_bot
+    environment:
+        TOKEN: ${TOKEN}
   watchtower:
     image: containrrr/watchtower
     volumes:
